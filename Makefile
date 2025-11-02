@@ -129,6 +129,30 @@ unnamed/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/build
 .PHONY : unnamed/fast
 
+src/hero.o: src/hero.cpp.o
+.PHONY : src/hero.o
+
+# target to build an object file
+src/hero.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/hero.cpp.o
+.PHONY : src/hero.cpp.o
+
+src/hero.i: src/hero.cpp.i
+.PHONY : src/hero.i
+
+# target to preprocess a source file
+src/hero.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/hero.cpp.i
+.PHONY : src/hero.cpp.i
+
+src/hero.s: src/hero.cpp.s
+.PHONY : src/hero.s
+
+# target to generate assembly for a file
+src/hero.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/hero.cpp.s
+.PHONY : src/hero.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... unnamed"
+	@echo "... src/hero.o"
+	@echo "... src/hero.i"
+	@echo "... src/hero.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

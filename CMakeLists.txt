@@ -4,6 +4,8 @@ project(unnamed LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+file(GLOB_RECURSE SOURCES src/*cpp)
+
 # --- Find SDL2 and its extensions ---
 find_package(PkgConfig REQUIRED)
 
@@ -28,7 +30,7 @@ link_directories(
 )
 
 # --- Source files ---
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 # --- Link libraries ---
 target_link_libraries(${PROJECT_NAME}
