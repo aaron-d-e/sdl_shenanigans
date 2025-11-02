@@ -3,6 +3,7 @@
 
 CMakeFiles/unnamed.dir/src/main.cpp.o
  /home/aaron/unnamed/src/main.cpp
+ /home/aaron/unnamed/src/drawing.h
  /usr/include/SDL2/SDL.h
  /usr/include/SDL2/SDL_assert.h
  /usr/include/SDL2/SDL_atomic.h
