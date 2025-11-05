@@ -1,4 +1,5 @@
-#include "hero.h"
+#include "entity.h"
+#include "debug.h"
 #include <iostream>
 
 using namespace std;
@@ -31,13 +32,22 @@ int main() {
         return 1;
     }
 
-    SDL_Rect rect;
-    rect.x = 100;
-    rect.y = HEIGHT - 250;
-    rect.w = 150;
-    rect.h = 150;
+    SDL_Rect heroRect;
+    heroRect.x = 250;
+    heroRect.y = HEIGHT - 400;
+    heroRect.w = 150;
+    heroRect.h = 150;
+    Hero hero(heroRect, 0, 0, 255, 1);
+	rectLog(cout, heroRect, "Hero Rect");
 
-    Hero hero(rect, 0, 100, 100, 255);
+
+    SDL_Rect enemyRect;
+    enemyRect.x = WIDTH - 150 - 250;
+    enemyRect.y = 400;
+    enemyRect.w = 150;
+    enemyRect.h = 150;
+    Enemy enemy(enemyRect, 255, 0, 0, 1);
+	rectLog(cout, enemyRect, "Enemy Rect");
 
     bool running = true;
     SDL_Event event;
@@ -52,18 +62,18 @@ int main() {
                 }
             }
         }
-		//clear the scene
+        // clear the scene
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
 
-		//game render here
-        hero.drawHeroRect(renderer);
-
-		//present render
+        // game render here
+        hero.drawEntityRect(renderer);
+        enemy.drawEntityRect(renderer);
+        // present render
         SDL_RenderPresent(renderer);
     }
 
-	//clean up
+    // clean up
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();

@@ -72,19 +72,19 @@ include CMakeFiles/unnamed.dir/flags.make
 CMakeFiles/unnamed.dir/codegen:
 .PHONY : CMakeFiles/unnamed.dir/codegen
 
-CMakeFiles/unnamed.dir/src/hero.cpp.o: CMakeFiles/unnamed.dir/flags.make
-CMakeFiles/unnamed.dir/src/hero.cpp.o: src/hero.cpp
-CMakeFiles/unnamed.dir/src/hero.cpp.o: CMakeFiles/unnamed.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/unnamed/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unnamed.dir/src/hero.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unnamed.dir/src/hero.cpp.o -MF CMakeFiles/unnamed.dir/src/hero.cpp.o.d -o CMakeFiles/unnamed.dir/src/hero.cpp.o -c /home/aaron/unnamed/src/hero.cpp
+CMakeFiles/unnamed.dir/src/entity.cpp.o: CMakeFiles/unnamed.dir/flags.make
+CMakeFiles/unnamed.dir/src/entity.cpp.o: src/entity.cpp
+CMakeFiles/unnamed.dir/src/entity.cpp.o: CMakeFiles/unnamed.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/unnamed/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unnamed.dir/src/entity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unnamed.dir/src/entity.cpp.o -MF CMakeFiles/unnamed.dir/src/entity.cpp.o.d -o CMakeFiles/unnamed.dir/src/entity.cpp.o -c /home/aaron/unnamed/src/entity.cpp
 
-CMakeFiles/unnamed.dir/src/hero.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/unnamed.dir/src/hero.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaron/unnamed/src/hero.cpp > CMakeFiles/unnamed.dir/src/hero.cpp.i
+CMakeFiles/unnamed.dir/src/entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/unnamed.dir/src/entity.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaron/unnamed/src/entity.cpp > CMakeFiles/unnamed.dir/src/entity.cpp.i
 
-CMakeFiles/unnamed.dir/src/hero.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/unnamed.dir/src/hero.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaron/unnamed/src/hero.cpp -o CMakeFiles/unnamed.dir/src/hero.cpp.s
+CMakeFiles/unnamed.dir/src/entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/unnamed.dir/src/entity.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaron/unnamed/src/entity.cpp -o CMakeFiles/unnamed.dir/src/entity.cpp.s
 
 CMakeFiles/unnamed.dir/src/main.cpp.o: CMakeFiles/unnamed.dir/flags.make
 CMakeFiles/unnamed.dir/src/main.cpp.o: src/main.cpp
@@ -102,13 +102,13 @@ CMakeFiles/unnamed.dir/src/main.cpp.s: cmake_force
 
 # Object files for target unnamed
 unnamed_OBJECTS = \
-"CMakeFiles/unnamed.dir/src/hero.cpp.o" \
+"CMakeFiles/unnamed.dir/src/entity.cpp.o" \
 "CMakeFiles/unnamed.dir/src/main.cpp.o"
 
 # External object files for target unnamed
 unnamed_EXTERNAL_OBJECTS =
 
-unnamed: CMakeFiles/unnamed.dir/src/hero.cpp.o
+unnamed: CMakeFiles/unnamed.dir/src/entity.cpp.o
 unnamed: CMakeFiles/unnamed.dir/src/main.cpp.o
 unnamed: CMakeFiles/unnamed.dir/build.make
 unnamed: CMakeFiles/unnamed.dir/compiler_depend.ts
