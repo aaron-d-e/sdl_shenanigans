@@ -5,9 +5,9 @@
 
 class Hero {
   public:
-    Hero(SDL_Rect rect);
+    Hero(SDL_Rect rect); //black as default
+    Hero(SDL_Rect rect, Uint8 r, Uint8 g, Uint8 b, Uint8 a); //colorized
     void drawHeroRect(SDL_Renderer *renderer);
-    void setHeroColor(Uint8, Uint8, Uint8, Uint8);
 
   private:
     SDL_Rect rect;

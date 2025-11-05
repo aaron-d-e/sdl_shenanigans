@@ -31,29 +31,39 @@ int main() {
         return 1;
     }
 
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-    SDL_RenderClear(renderer);
+    SDL_Rect rect;
+    rect.x = 100;
+    rect.y = HEIGHT - 250;
+    rect.w = 150;
+    rect.h = 150;
 
-    {
-        SDL_Rect rect;
-        rect.x = 100;
-        rect.y = HEIGHT - 250;
-        rect.w = 150;
-        rect.h = 150;
+    Hero hero(rect, 0, 100, 100, 255);
 
-        Uint8 r = 0;
-        Uint8 g = 0;
-        Uint8 b = 0;
-        Uint8 a = 255;
+    bool running = true;
+    SDL_Event event;
+    while (running) {
+        while (SDL_PollEvent(&event)) {
+            if (event.type == SDL_QUIT) {
+                running = false;
+            }
+            else if (event.type == SDL_KEYDOWN) {
+                if (event.key.keysym.sym == SDLK_ESCAPE) {
+                    running = false;
+                }
+            }
+        }
+		//clear the scene
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_RenderClear(renderer);
 
-        Hero hero(rect);
-		hero.drawHeroRect(renderer);
+		//game render here
+        hero.drawHeroRect(renderer);
+
+		//present render
+        SDL_RenderPresent(renderer);
     }
 
-    SDL_RenderPresent(renderer);
-
-    SDL_Delay(3000); // Keep window open for 2 seconds
-
+	//clean up
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
