@@ -1,0 +1,3 @@
+level: 1
+enemeies: basic(1)
+reward: gold(10)

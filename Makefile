@@ -153,6 +153,30 @@ src/entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/entity.cpp.s
 .PHONY : src/entity.cpp.s
 
+src/level.o: src/level.cpp.o
+.PHONY : src/level.o
+
+# target to build an object file
+src/level.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/level.cpp.o
+.PHONY : src/level.cpp.o
+
+src/level.i: src/level.cpp.i
+.PHONY : src/level.i
+
+# target to preprocess a source file
+src/level.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/level.cpp.i
+.PHONY : src/level.cpp.i
+
+src/level.s: src/level.cpp.s
+.PHONY : src/level.s
+
+# target to generate assembly for a file
+src/level.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/level.cpp.s
+.PHONY : src/level.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... src/entity.o"
 	@echo "... src/entity.i"
 	@echo "... src/entity.s"
+	@echo "... src/level.o"
+	@echo "... src/level.i"
+	@echo "... src/level.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

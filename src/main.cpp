@@ -1,8 +1,6 @@
 #include "debug.h"
-#include "entity.h"
+#include "levels.h"
 #include <iostream>
-#include <stack>
-
 using namespace std;
 
 int main() {
@@ -54,6 +52,8 @@ int main() {
     rectLog(cout, enemyRect, "Enemy Rect");
 
     enemies.push(enemy);
+
+    LoadLevel(1, renderer);
 
     bool running = true;
     SDL_Event event;

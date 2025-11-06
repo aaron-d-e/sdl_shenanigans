@@ -3,6 +3,7 @@ unnamed: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/unnamed.dir/src/entity.cpp.o \
+  CMakeFiles/unnamed.dir/src/level.cpp.o \
   CMakeFiles/unnamed.dir/src/main.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libSDL2.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libSDL2_image.so \
@@ -78,6 +79,8 @@ unnamed: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
 CMakeFiles/unnamed.dir/src/entity.cpp.o:
+
+CMakeFiles/unnamed.dir/src/level.cpp.o:
 
 CMakeFiles/unnamed.dir/src/main.cpp.o:
 

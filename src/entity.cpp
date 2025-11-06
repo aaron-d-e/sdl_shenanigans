@@ -34,4 +34,5 @@ void Entity::takeDamage(int damage) {
     }
 }
 
-void Hero::basicAttack(Entity *enemy) { enemy->takeDamage(baseDamage); }
+void Hero::basicAttack(Entity *target) { target->takeDamage(baseDamage); }
+void Enemy::basicAttack(Entity *target) { target->takeDamage(baseDamage); }
