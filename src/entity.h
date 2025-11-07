@@ -12,13 +12,13 @@ class Entity {
     virtual ~Entity() = default;
 
     // RENDER FUNCTIONS
-    void drawEntityRect(SDL_Renderer *renderer);
+    void DrawEntityRect(SDL_Renderer *renderer);
 
     // GAME FUNCTIONS
     int getHealth() { return health; }
     virtual void TakeDamage(int damage) = 0;
     virtual void
-    basicAttack(Entity *target) = 0; // must be implemented in children classes
+    BasicAttack(Entity *target) = 0; // must be implemented in children classes
 
   protected:
     SDL_Rect rect;
@@ -37,7 +37,7 @@ class Hero : public Entity {
         : Entity(rect, r, g, b, a) {}
 
     // GAME FUNCTIONS
-    void basicAttack(Entity *target);
+    void BasicAttack(Entity *target);
     void TakeDamage(int damage);
 
   private:
@@ -59,8 +59,8 @@ class Enemy : public Entity {
     }
 
     // GAME FUNCTIONS
-    void basicAttack(Entity *target);
-	void TakeDamage(int damage);
+    void BasicAttack(Entity *target);
+    void TakeDamage(int damage);
 
   private:
     SDL_Rect main, left, right;

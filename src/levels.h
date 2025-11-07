@@ -9,6 +9,8 @@
 #include <vector>
 using namespace std;
 
+const int MAX_ENEMIES = 4;
+
 class GameManager {
     // TODO:
     //  1) create and parse json to get level data
@@ -28,6 +30,8 @@ class GameManager {
 
     int GetEnemyCount();
 
+	Entity* GetTargetEnemy(int index) const;
+
   private:
     // load level file into filename
     void LoadFile();
@@ -39,7 +43,7 @@ class GameManager {
     int locationIndex;
     int numOfEnemies;
     string filename;
-    SDL_Rect locations[4];
+    SDL_Rect locations[MAX_ENEMIES];
     vector<Entity *> enemies;
 };
 #endif

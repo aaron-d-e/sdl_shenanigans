@@ -51,7 +51,8 @@ void GameManager::ReadFile() {
             string type;
             inFile >> type;
             if (type == "Enemy") {
-                assert(locationIndex < 4); // crash if more than 4 enemies
+                assert(locationIndex <
+                       MAX_ENEMIES); // crash if more than 4 enemies
                 enemies.push_back(new Enemy(locations[locationIndex]));
             }
 
@@ -70,6 +71,11 @@ int GameManager::GetEnemyCount() { return numOfEnemies; }
 
 void GameManager::RenderEnemies(SDL_Renderer *renderer) {
     for (int i = 0; i < numOfEnemies; i++) {
-        enemies.at(i)->drawEntityRect(renderer);
+        enemies.at(i)->DrawEntityRect(renderer);
     }
+}
+
+Entity *GameManager::GetTargetEnemy(int index) const {
+    assert(index < MAX_ENEMIES);
+    return enemies[index];
 }

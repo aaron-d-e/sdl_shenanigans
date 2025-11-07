@@ -23,7 +23,7 @@ Entity::Entity(SDL_Rect rect, Uint8 r, Uint8 g, Uint8 b, Uint8 a) {
     health = 100;
 }
 
-void Entity::drawEntityRect(SDL_Renderer *renderer) {
+void Entity::DrawEntityRect(SDL_Renderer *renderer) {
     SDL_SetRenderDrawColor(renderer, r, g, b, a);
     SDL_RenderFillRect(renderer, &rect);
 }
@@ -39,5 +39,5 @@ void Enemy::TakeDamage(int damage) {
     }
 }
 
-void Hero::basicAttack(Entity *target) { target->TakeDamage(baseDamage); }
-void Enemy::basicAttack(Entity *target) { target->TakeDamage(baseDamage); }
+void Hero::BasicAttack(Entity *target) { target->TakeDamage(baseDamage); }
+void Enemy::BasicAttack(Entity *target) { target->TakeDamage(baseDamage); }

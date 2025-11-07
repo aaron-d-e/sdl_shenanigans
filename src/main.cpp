@@ -68,7 +68,7 @@ int main() {
         SDL_RenderClear(renderer);
 
         // game render here
-        hero->drawEntityRect(renderer);
+        hero->DrawEntityRect(renderer);
 
         if (game.GetEnemyCount() > 0) {
             game.RenderEnemies(renderer);
