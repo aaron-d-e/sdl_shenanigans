@@ -10,8 +10,8 @@ GameManager::GameManager(int level) {
     filename = "";       // will crash if not initialized later
 
     // load screen location into array
-    locations[0] = {WIDTH - 150 - 250, 400, 150, 150};
-    locations[1] = {WIDTH - 300 - 250, 400, 150, 150};
+    locations[0] = {WIDTH - 75 - 250, 400, 75, 75};
+    locations[1] = {WIDTH - 375 - 250, 200, 75, 75};
 }
 GameManager::~GameManager() {
     for (auto &ptr : enemies) {

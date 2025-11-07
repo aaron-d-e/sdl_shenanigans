@@ -16,9 +16,9 @@ class Entity {
 
     // GAME FUNCTIONS
     int getHealth() { return health; }
-    virtual void takeDamage(int damage);
+    virtual void TakeDamage(int damage) = 0;
     virtual void
-    basicAttack(Entity *enemy) = 0; // must be implemented in children classes
+    basicAttack(Entity *target) = 0; // must be implemented in children classes
 
   protected:
     SDL_Rect rect;
@@ -29,31 +29,42 @@ class Entity {
 class Hero : public Entity {
   public:
     // CONSTRUCTORS
-    Hero(SDL_Rect rect) : Entity(rect) {}
+    Hero(SDL_Rect rect) : Entity(rect) {
+        health = 100;
+        baseDamage = 10;
+    }
     Hero(SDL_Rect rect, Uint8 r, Uint8 g, Uint8 b, Uint8 a)
         : Entity(rect, r, g, b, a) {}
 
     // GAME FUNCTIONS
-    void basicAttack(Entity *enemy);
+    void basicAttack(Entity *target);
+    void TakeDamage(int damage);
 
   private:
     int level;
-    int baseDamage = 20;
+    int baseDamage;
 };
 
 class Enemy : public Entity {
   public:
     // CONSTRUCTORS
-    Enemy(SDL_Rect rect) : Entity(rect) {}
+    Enemy(SDL_Rect rect) : Entity(rect) {
+        health = 50;
+        baseDamage = 10;
+    }
     Enemy(SDL_Rect rect, Uint8 r, Uint8 g, Uint8 b, Uint8 a)
-        : Entity(rect, r, g, b, a) {}
+        : Entity(rect, r, g, b, a) {
+        health = 50;
+        baseDamage = 10;
+    }
 
     // GAME FUNCTIONS
-    void basicAttack(Entity *enemy);
+    void basicAttack(Entity *target);
+	void TakeDamage(int damage);
 
   private:
     SDL_Rect main, left, right;
-    int baseDamage = 10;
+    int baseDamage;
 };
 
 #endif

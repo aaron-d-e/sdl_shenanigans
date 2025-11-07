@@ -28,11 +28,16 @@ void Entity::drawEntityRect(SDL_Renderer *renderer) {
     SDL_RenderFillRect(renderer, &rect);
 }
 
-void Entity::takeDamage(int damage) {
+void Hero::TakeDamage(int damage) {
+    if (this->health > 0) {
+        health -= damage;
+    }
+}
+void Enemy::TakeDamage(int damage) {
     if (this->health > 0) {
         health -= damage;
     }
 }
 
-void Hero::basicAttack(Entity *target) { target->takeDamage(baseDamage); }
-void Enemy::basicAttack(Entity *target) { target->takeDamage(baseDamage); }
+void Hero::basicAttack(Entity *target) { target->TakeDamage(baseDamage); }
+void Enemy::basicAttack(Entity *target) { target->TakeDamage(baseDamage); }
