@@ -71,18 +71,21 @@ int main() {
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);
                     }
+                    SDL_Delay(100);
                 }
                 else if (event.key.keysym.sym == SDLK_2) {
                     Entity *enemy = game->GetTargetEnemy(1);
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);
                     }
+                    SDL_Delay(100);
                 }
                 else if (event.key.keysym.sym == SDLK_3) {
                     Entity *enemy = game->GetTargetEnemy(2);
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);
                     }
+                    SDL_Delay(100);
                 }
             }
         }
