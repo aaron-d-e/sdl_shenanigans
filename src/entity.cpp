@@ -37,6 +37,7 @@ void Enemy::TakeDamage(int damage) {
     if (this->health > 0) {
         health -= damage;
     }
+	cout << "Enemy is taking damage" << endl;
 }
 
 void Hero::BasicAttack(Entity *target) { target->TakeDamage(baseDamage); }

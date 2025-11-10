@@ -38,9 +38,8 @@ void GameManager::ReadFile() {
         assert(inFile); // crash program with assert
     }
 
-    while (inFile) {
-        string category;
-        inFile >> category;
+    string category;
+    while (inFile >> category) {
 
         if (category == "numOfEnemies") {
             int x;
@@ -53,7 +52,8 @@ void GameManager::ReadFile() {
             if (type == "Enemy") {
                 assert(locationIndex <
                        MAX_ENEMIES); // crash if more than 4 enemies
-                enemies.push_back(new Enemy(locations[locationIndex]));
+                enemies.push_back(
+                    new Enemy(locations[locationIndex], 255, 0, 0, 1));
             }
 
             // rest of type checks here
@@ -67,15 +67,39 @@ void GameManager::Init() {
     this->ReadFile();
 }
 
-int GameManager::GetEnemyCount() { return numOfEnemies; }
+void GameManager::CheckEntityHealth() {
+    for (int i = 0; i < numOfEnemies; i++) {
+        if (enemies.at(i) != NULL && enemies.at(i)->getHealth() < 1) {
+            delete enemies.at(i);
+            enemies.at(i) = NULL;
+        }
+    }
+}
+
+int GameManager::GetEnemyCount() {
+    int count = 0;
+    for (int i = 0; i < numOfEnemies; i++) {
+        if (enemies.at(i) != NULL) {
+            count++;
+        }
+    }
+    return count;
+}
 
 void GameManager::RenderEnemies(SDL_Renderer *renderer) {
     for (int i = 0; i < numOfEnemies; i++) {
-        enemies.at(i)->DrawEntityRect(renderer);
+        if (enemies.at(i) != NULL) {
+            enemies.at(i)->DrawEntityRect(renderer);
+        }
     }
+
+    this->CheckEntityHealth();
 }
 
 Entity *GameManager::GetTargetEnemy(int index) const {
     assert(index < MAX_ENEMIES);
+    if (enemies.at(index) == NULL) {
+        return NULL;
+    }
     return enemies[index];
 }

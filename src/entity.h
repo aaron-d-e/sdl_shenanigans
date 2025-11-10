@@ -3,6 +3,8 @@
 #pragma once
 
 #include <SDL2/SDL.h>
+#include <iostream>
+using namespace std;
 
 class Entity {
   public:
@@ -34,7 +36,10 @@ class Hero : public Entity {
         baseDamage = 10;
     }
     Hero(SDL_Rect rect, Uint8 r, Uint8 g, Uint8 b, Uint8 a)
-        : Entity(rect, r, g, b, a) {}
+        : Entity(rect, r, g, b, a) {
+        health = 100;
+        baseDamage = 10;
+    }
 
     // GAME FUNCTIONS
     void BasicAttack(Entity *target);

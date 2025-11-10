@@ -32,6 +32,8 @@ int main() {
         return 1;
     }
 
+    //---------------------------------------------------------//
+
     GameManager game(0);
 
     game.Init();
@@ -59,7 +61,17 @@ int main() {
                 if (event.key.keysym.sym == SDLK_ESCAPE) {
                     running = false;
                 }
-                if (event.key.keysym.sym == SDLK_SPACE) {
+                if (event.key.keysym.sym == SDLK_1) {
+                    Entity *enemy = game.GetTargetEnemy(0);
+                    if (enemy != NULL) {
+                        hero->BasicAttack(enemy);
+                    }
+                }
+                else if (event.key.keysym.sym == SDLK_2) {
+                    Entity *enemy = game.GetTargetEnemy(1);
+                    if (enemy != NULL) {
+                        hero->BasicAttack(enemy);
+                    }
                 }
             }
         }
@@ -76,6 +88,7 @@ int main() {
         else {
             cout << "You won, shutting down..." << endl;
             running = false;
+            SDL_RenderPresent(renderer);
             SDL_Delay(1500);
         }
 

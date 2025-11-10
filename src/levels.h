@@ -38,6 +38,8 @@ class GameManager {
     // set values from file
     void ReadFile();
 
+	void CheckEntityHealth();
+
   private:
     int level;
     int locationIndex;
