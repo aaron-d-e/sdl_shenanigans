@@ -1,0 +1,4 @@
+numOfEnemies 3
+Enemy
+Enemy
+Enemy

@@ -12,6 +12,7 @@ GameManager::GameManager(int level) {
     // load screen location into array
     locations[0] = {WIDTH - 75 - 250, 400, 75, 75};
     locations[1] = {WIDTH - 375 - 250, 200, 75, 75};
+    locations[2] = {WIDTH - 675 - 250, 200, 75, 75};
 }
 GameManager::~GameManager() {
     for (auto &ptr : enemies) {
@@ -25,6 +26,10 @@ void GameManager::LoadFile() {
 
     case 0:
         this->filename = "levels/level0.txt";
+        break;
+    case 1:
+        this->filename = "levels/level1.txt";
+        break;
     }
 }
 

@@ -34,11 +34,6 @@ int main() {
 
     //---------------------------------------------------------//
 
-    GameManager game(0);
-
-    game.Init();
-    cout << "Number of Enemies: " << game.GetEnemyCount() << endl;
-
     SDL_Rect heroRect;
     heroRect.x = 250;
     heroRect.y = HEIGHT - 400;
@@ -51,8 +46,18 @@ int main() {
     rectLog(cout, heroRect, "Hero Rect");
 
     bool running = true;
+    bool levelChanged = true;
+    int level = 0;
     SDL_Event event;
+    GameManager *game;
     while (running) {
+        if (levelChanged) {
+            game = new GameManager(level);
+            cout << "Loading level: " << level << endl;
+            game->Init();
+            levelChanged = false;
+        }
+
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                 running = false;
@@ -62,13 +67,19 @@ int main() {
                     running = false;
                 }
                 if (event.key.keysym.sym == SDLK_1) {
-                    Entity *enemy = game.GetTargetEnemy(0);
+                    Entity *enemy = game->GetTargetEnemy(0);
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);
                     }
                 }
                 else if (event.key.keysym.sym == SDLK_2) {
-                    Entity *enemy = game.GetTargetEnemy(1);
+                    Entity *enemy = game->GetTargetEnemy(1);
+                    if (enemy != NULL) {
+                        hero->BasicAttack(enemy);
+                    }
+                }
+                else if (event.key.keysym.sym == SDLK_3) {
+                    Entity *enemy = game->GetTargetEnemy(2);
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);
                     }
@@ -82,18 +93,23 @@ int main() {
         // game render here
         hero->DrawEntityRect(renderer);
 
-        if (game.GetEnemyCount() > 0) {
-            game.RenderEnemies(renderer);
+        if (game->GetEnemyCount() > 0) {
+            game->RenderEnemies(renderer);
         }
         else {
-            cout << "You won, shutting down..." << endl;
-            running = false;
+            cout << "You won, changing levels..." << endl;
+            levelChanged = true;
             SDL_RenderPresent(renderer);
             SDL_Delay(1500);
         }
 
         // present render
         SDL_RenderPresent(renderer);
+
+        if (levelChanged) {
+            delete game;
+            level++;
+        }
     }
 
     // clean up
