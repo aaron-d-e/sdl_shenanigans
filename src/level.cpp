@@ -5,9 +5,10 @@ const int HEIGHT = 1000;
 
 GameManager::GameManager(int level) {
     this->level = level; // current level for loading file
-    numOfEnemies = 0;    // number of enemies to push into vector
-    locationIndex = 0;   // location on screen to render to
-    filename = "";       // will crash if not initialized later
+    remainingEnemies = loadedEnemies =
+        0;             // number of enemies to push into vector
+    locationIndex = 0; // location on screen to render to
+    filename = "";     // will crash if not initialized later
 
     // load screen location into array
     locations[0] = {WIDTH - 75 - 250, 400, 75, 75};
@@ -49,9 +50,9 @@ void GameManager::ReadFile() {
         if (category == "numOfEnemies") {
             int x;
             inFile >> x;
-            this->numOfEnemies = x;
+            this->remainingEnemies = x;
         }
-        for (int i = 0; i < numOfEnemies; i++) {
+        for (int i = 0; i < remainingEnemies; i++) {
             string type;
             inFile >> type;
             if (type == "Enemy") {
@@ -65,6 +66,7 @@ void GameManager::ReadFile() {
             locationIndex++; // place enemy in empty position on-screen
         }
     }
+    loadedEnemies = remainingEnemies;
 }
 
 void GameManager::Init() {
@@ -73,7 +75,7 @@ void GameManager::Init() {
 }
 
 void GameManager::CheckEntityHealth() {
-    for (int i = 0; i < numOfEnemies; i++) {
+    for (int i = 0; i < remainingEnemies; i++) {
         if (enemies.at(i) != NULL && enemies.at(i)->getHealth() < 1) {
             delete enemies.at(i);
             enemies.at(i) = NULL;
@@ -83,7 +85,7 @@ void GameManager::CheckEntityHealth() {
 
 int GameManager::GetEnemyCount() {
     int count = 0;
-    for (int i = 0; i < numOfEnemies; i++) {
+    for (int i = 0; i < remainingEnemies; i++) {
         if (enemies.at(i) != NULL) {
             count++;
         }
@@ -92,7 +94,7 @@ int GameManager::GetEnemyCount() {
 }
 
 void GameManager::RenderEnemies(SDL_Renderer *renderer) {
-    for (int i = 0; i < numOfEnemies; i++) {
+    for (int i = 0; i < remainingEnemies; i++) {
         if (enemies.at(i) != NULL) {
             enemies.at(i)->DrawEntityRect(renderer);
         }
@@ -108,3 +110,5 @@ Entity *GameManager::GetTargetEnemy(int index) const {
     }
     return enemies[index];
 }
+
+int GameManager::GetLoadedEnemies() { return loadedEnemies; }

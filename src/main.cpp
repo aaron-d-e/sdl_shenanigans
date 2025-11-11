@@ -66,21 +66,21 @@ int main() {
                 if (event.key.keysym.sym == SDLK_ESCAPE) {
                     running = false;
                 }
-                if (event.key.keysym.sym == SDLK_1) {
+                if (event.key.keysym.sym == SDLK_1  && game->GetLoadedEnemies() > 0) {
                     Entity *enemy = game->GetTargetEnemy(0);
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);
                     }
                     SDL_Delay(100);
                 }
-                else if (event.key.keysym.sym == SDLK_2) {
+                else if (event.key.keysym.sym == SDLK_2 && game->GetLoadedEnemies() > 1) {
                     Entity *enemy = game->GetTargetEnemy(1);
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);
                     }
                     SDL_Delay(100);
                 }
-                else if (event.key.keysym.sym == SDLK_3) {
+                else if (event.key.keysym.sym == SDLK_3 && game->GetLoadedEnemies() > 2) {
                     Entity *enemy = game->GetTargetEnemy(2);
                     if (enemy != NULL) {
                         hero->BasicAttack(enemy);

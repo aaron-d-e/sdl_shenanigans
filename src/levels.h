@@ -29,6 +29,7 @@ class GameManager {
     void RenderEnemies(SDL_Renderer *renderer);
 
     int GetEnemyCount();
+	int GetLoadedEnemies();
 
 	Entity* GetTargetEnemy(int index) const;
 
@@ -43,7 +44,8 @@ class GameManager {
   private:
     int level;
     int locationIndex;
-    int numOfEnemies;
+	int loadedEnemies;
+    int remainingEnemies;
     string filename;
     SDL_Rect locations[MAX_ENEMIES];
     vector<Entity *> enemies;
