@@ -1,6 +1,6 @@
-CMakeFiles/unnamed.dir/src/main.cpp.o: /home/aaron/unnamed/src/main.cpp \
- /usr/include/stdc-predef.h /home/aaron/unnamed/src/debug.h \
- /usr/include/c++/15.2.1/iostream \
+CMakeFiles/unnamed.dir/src/main.cpp.o: \
+ /home/aaron/Personal/JRPG/src/main.cpp /usr/include/stdc-predef.h \
+ /home/aaron/Personal/JRPG/src/debug.h /usr/include/c++/15.2.1/iostream \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -146,11 +146,12 @@ CMakeFiles/unnamed.dir/src/main.cpp.o: /home/aaron/unnamed/src/main.cpp \
  /usr/include/c++/15.2.1/bits/ostream.tcc /usr/include/c++/15.2.1/istream \
  /usr/include/c++/15.2.1/bits/istream.tcc /usr/include/c++/15.2.1/sstream \
  /usr/include/c++/15.2.1/bits/sstream.tcc \
- /home/aaron/unnamed/src/levels.h /home/aaron/unnamed/src/entity.h \
- /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
- /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
- /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
- /usr/include/SDL2/close_code.h /usr/include/SDL2/SDL_config_unix.h \
+ /home/aaron/Personal/JRPG/src/levels.h \
+ /home/aaron/Personal/JRPG/src/entity.h /usr/include/SDL2/SDL.h \
+ /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_stdinc.h \
+ /usr/include/SDL2/SDL_config.h /usr/include/SDL2/SDL_platform.h \
+ /usr/include/SDL2/begin_code.h /usr/include/SDL2/close_code.h \
+ /usr/include/SDL2/SDL_config_unix.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
