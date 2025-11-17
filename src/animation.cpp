@@ -1,5 +1,4 @@
 #include "animation.h"
-#include <spiro.h>
 #include "sprite_sheet.h"
 
 Animation::Animation(const vector<int>& frameIndices, float framesPerSecond)

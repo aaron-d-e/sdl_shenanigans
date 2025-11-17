@@ -8,6 +8,15 @@ SpriteSheet::SpriteSheet(SDL_Renderer* renderer, const string& filename,
     : texture(NULL), frameWidth(frameWidth), frameHeight(frameHeight)
 
 {
+    // check for sdl2 image initStatus
+    int flags = IMG_INIT_PNG;
+    int initStatus = IMG_Init(flags);
+    if ((initStatus & flags) != flags)
+    {
+        cout << "SDL2_Image format not initialized (might not be available)"
+             << endl;
+    }
+
     // create surface with the passed filename, is deleted later in the
     // constructor
     SDL_Surface* surface = IMG_Load(filename.c_str());

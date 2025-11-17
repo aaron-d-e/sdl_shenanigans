@@ -129,6 +129,30 @@ unnamed/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/build
 .PHONY : unnamed/fast
 
+src/animation.o: src/animation.cpp.o
+.PHONY : src/animation.o
+
+# target to build an object file
+src/animation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/animation.cpp.o
+.PHONY : src/animation.cpp.o
+
+src/animation.i: src/animation.cpp.i
+.PHONY : src/animation.i
+
+# target to preprocess a source file
+src/animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/animation.cpp.i
+.PHONY : src/animation.cpp.i
+
+src/animation.s: src/animation.cpp.s
+.PHONY : src/animation.s
+
+# target to generate assembly for a file
+src/animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/animation.cpp.s
+.PHONY : src/animation.cpp.s
+
 src/entity.o: src/entity.cpp.o
 .PHONY : src/entity.o
 
@@ -201,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sprite_sheet.o: src/sprite_sheet.cpp.o
+.PHONY : src/sprite_sheet.o
+
+# target to build an object file
+src/sprite_sheet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o
+.PHONY : src/sprite_sheet.cpp.o
+
+src/sprite_sheet.i: src/sprite_sheet.cpp.i
+.PHONY : src/sprite_sheet.i
+
+# target to preprocess a source file
+src/sprite_sheet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.i
+.PHONY : src/sprite_sheet.cpp.i
+
+src/sprite_sheet.s: src/sprite_sheet.cpp.s
+.PHONY : src/sprite_sheet.s
+
+# target to generate assembly for a file
+src/sprite_sheet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/unnamed.dir/build.make CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.s
+.PHONY : src/sprite_sheet.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... unnamed"
+	@echo "... src/animation.o"
+	@echo "... src/animation.i"
+	@echo "... src/animation.s"
 	@echo "... src/entity.o"
 	@echo "... src/entity.i"
 	@echo "... src/entity.s"
@@ -219,6 +270,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sprite_sheet.o"
+	@echo "... src/sprite_sheet.i"
+	@echo "... src/sprite_sheet.s"
 .PHONY : help
 
 

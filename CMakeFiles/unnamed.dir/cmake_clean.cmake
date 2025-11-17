@@ -1,11 +1,15 @@
 file(REMOVE_RECURSE
   "CMakeFiles/unnamed.dir/link.d"
+  "CMakeFiles/unnamed.dir/src/animation.cpp.o"
+  "CMakeFiles/unnamed.dir/src/animation.cpp.o.d"
   "CMakeFiles/unnamed.dir/src/entity.cpp.o"
   "CMakeFiles/unnamed.dir/src/entity.cpp.o.d"
   "CMakeFiles/unnamed.dir/src/level.cpp.o"
   "CMakeFiles/unnamed.dir/src/level.cpp.o.d"
   "CMakeFiles/unnamed.dir/src/main.cpp.o"
   "CMakeFiles/unnamed.dir/src/main.cpp.o.d"
+  "CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o"
+  "CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o.d"
   "unnamed"
   "unnamed.pdb"
 )

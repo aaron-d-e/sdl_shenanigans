@@ -845,6 +845,7 @@ CMakeFiles/unnamed.dir/src/main.cpp.o
  /home/aaron/Personal/JRPG/src/debug.h
  /home/aaron/Personal/JRPG/src/entity.h
  /home/aaron/Personal/JRPG/src/levels.h
+ /home/aaron/Personal/JRPG/src/sprite_sheet.h
  /usr/include/SDL2/SDL.h
  /usr/include/SDL2/SDL_assert.h
  /usr/include/SDL2/SDL_atomic.h
@@ -1320,6 +1321,17 @@ unnamed
  /usr/lib/libyuv.so
  /usr/lib/libz.so.1
  /usr/lib/libzstd.so.1
+ /usr/lib32/libbrotlicommon.so.1
+ /usr/lib32/libbrotlidec.so.1
+ /usr/lib32/libbrotlienc.so.1
+ /usr/lib32/libbz2.so.1.0
+ /usr/lib32/libfreetype.so.6
+ /usr/lib32/libglib-2.0.so.0
+ /usr/lib32/liblzma.so.5
+ /usr/lib32/libpcre2-8.so.0
+ /usr/lib32/libpng16.so.16
+ /usr/lib32/libz.so.1
+ /usr/lib32/libzstd.so.1
  /home/aaron/Personal/JRPG/CMakeFiles/unnamed.dir/src/entity.cpp.o
  /home/aaron/Personal/JRPG/CMakeFiles/unnamed.dir/src/level.cpp.o
  /home/aaron/Personal/JRPG/CMakeFiles/unnamed.dir/src/main.cpp.o

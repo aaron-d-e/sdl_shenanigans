@@ -4,6 +4,7 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_surface.h>
+#include "sprite_sheet.h"
 using namespace std;
 
 int main()
@@ -37,6 +38,7 @@ int main()
         return 1;
     }
 
+    /*
     int flags = IMG_INIT_PNG;
     int initStatus = IMG_Init(flags);
     if ((initStatus & flags) != flags)
@@ -53,6 +55,10 @@ int main()
     }
 
     SDL_Texture* testPNG = SDL_CreateTextureFromSurface(renderer, image);
+
+    */
+
+    SpriteSheet characSheet(renderer, "", 0, 0);
 
     bool running = true;
     SDL_Event event;
@@ -77,23 +83,24 @@ int main()
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
 
-        SDL_RenderCopy(renderer, testPNG, NULL, NULL);
+        // SDL_RenderCopy(renderer, testPNG, NULL, NULL);
 
         // present render
         SDL_RenderPresent(renderer);
     }
 
     // quit sdl2 image
-    IMG_Quit();
+    // IMG_Quit();
 
     // free sdl surface
-    SDL_FreeSurface(image);
+    //  SDL_FreeSurface(image);
 
     // destroy texture
-    SDL_DestroyTexture(testPNG);
+    // SDL_DestroyTexture(testPNG);
 
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
+
     return 0;
 }

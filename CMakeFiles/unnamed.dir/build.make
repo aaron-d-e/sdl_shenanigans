@@ -72,10 +72,24 @@ include CMakeFiles/unnamed.dir/flags.make
 CMakeFiles/unnamed.dir/codegen:
 .PHONY : CMakeFiles/unnamed.dir/codegen
 
+CMakeFiles/unnamed.dir/src/animation.cpp.o: CMakeFiles/unnamed.dir/flags.make
+CMakeFiles/unnamed.dir/src/animation.cpp.o: src/animation.cpp
+CMakeFiles/unnamed.dir/src/animation.cpp.o: CMakeFiles/unnamed.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unnamed.dir/src/animation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unnamed.dir/src/animation.cpp.o -MF CMakeFiles/unnamed.dir/src/animation.cpp.o.d -o CMakeFiles/unnamed.dir/src/animation.cpp.o -c /home/aaron/Personal/JRPG/src/animation.cpp
+
+CMakeFiles/unnamed.dir/src/animation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/unnamed.dir/src/animation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaron/Personal/JRPG/src/animation.cpp > CMakeFiles/unnamed.dir/src/animation.cpp.i
+
+CMakeFiles/unnamed.dir/src/animation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/unnamed.dir/src/animation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaron/Personal/JRPG/src/animation.cpp -o CMakeFiles/unnamed.dir/src/animation.cpp.s
+
 CMakeFiles/unnamed.dir/src/entity.cpp.o: CMakeFiles/unnamed.dir/flags.make
 CMakeFiles/unnamed.dir/src/entity.cpp.o: src/entity.cpp
 CMakeFiles/unnamed.dir/src/entity.cpp.o: CMakeFiles/unnamed.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unnamed.dir/src/entity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/unnamed.dir/src/entity.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unnamed.dir/src/entity.cpp.o -MF CMakeFiles/unnamed.dir/src/entity.cpp.o.d -o CMakeFiles/unnamed.dir/src/entity.cpp.o -c /home/aaron/Personal/JRPG/src/entity.cpp
 
 CMakeFiles/unnamed.dir/src/entity.cpp.i: cmake_force
@@ -89,7 +103,7 @@ CMakeFiles/unnamed.dir/src/entity.cpp.s: cmake_force
 CMakeFiles/unnamed.dir/src/level.cpp.o: CMakeFiles/unnamed.dir/flags.make
 CMakeFiles/unnamed.dir/src/level.cpp.o: src/level.cpp
 CMakeFiles/unnamed.dir/src/level.cpp.o: CMakeFiles/unnamed.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/unnamed.dir/src/level.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/unnamed.dir/src/level.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unnamed.dir/src/level.cpp.o -MF CMakeFiles/unnamed.dir/src/level.cpp.o.d -o CMakeFiles/unnamed.dir/src/level.cpp.o -c /home/aaron/Personal/JRPG/src/level.cpp
 
 CMakeFiles/unnamed.dir/src/level.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/unnamed.dir/src/level.cpp.s: cmake_force
 CMakeFiles/unnamed.dir/src/main.cpp.o: CMakeFiles/unnamed.dir/flags.make
 CMakeFiles/unnamed.dir/src/main.cpp.o: src/main.cpp
 CMakeFiles/unnamed.dir/src/main.cpp.o: CMakeFiles/unnamed.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/unnamed.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/unnamed.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unnamed.dir/src/main.cpp.o -MF CMakeFiles/unnamed.dir/src/main.cpp.o.d -o CMakeFiles/unnamed.dir/src/main.cpp.o -c /home/aaron/Personal/JRPG/src/main.cpp
 
 CMakeFiles/unnamed.dir/src/main.cpp.i: cmake_force
@@ -114,22 +128,40 @@ CMakeFiles/unnamed.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/unnamed.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaron/Personal/JRPG/src/main.cpp -o CMakeFiles/unnamed.dir/src/main.cpp.s
 
+CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o: CMakeFiles/unnamed.dir/flags.make
+CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o: src/sprite_sheet.cpp
+CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o: CMakeFiles/unnamed.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o -MF CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o.d -o CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o -c /home/aaron/Personal/JRPG/src/sprite_sheet.cpp
+
+CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaron/Personal/JRPG/src/sprite_sheet.cpp > CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.i
+
+CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaron/Personal/JRPG/src/sprite_sheet.cpp -o CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.s
+
 # Object files for target unnamed
 unnamed_OBJECTS = \
+"CMakeFiles/unnamed.dir/src/animation.cpp.o" \
 "CMakeFiles/unnamed.dir/src/entity.cpp.o" \
 "CMakeFiles/unnamed.dir/src/level.cpp.o" \
-"CMakeFiles/unnamed.dir/src/main.cpp.o"
+"CMakeFiles/unnamed.dir/src/main.cpp.o" \
+"CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o"
 
 # External object files for target unnamed
 unnamed_EXTERNAL_OBJECTS =
 
+unnamed: CMakeFiles/unnamed.dir/src/animation.cpp.o
 unnamed: CMakeFiles/unnamed.dir/src/entity.cpp.o
 unnamed: CMakeFiles/unnamed.dir/src/level.cpp.o
 unnamed: CMakeFiles/unnamed.dir/src/main.cpp.o
+unnamed: CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o
 unnamed: CMakeFiles/unnamed.dir/build.make
 unnamed: CMakeFiles/unnamed.dir/compiler_depend.ts
 unnamed: CMakeFiles/unnamed.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable unnamed"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aaron/Personal/JRPG/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable unnamed"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unnamed.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

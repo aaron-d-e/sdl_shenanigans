@@ -1,6 +1,7 @@
-CMakeFiles/unnamed.dir/src/main.cpp.o: \
- /home/aaron/Personal/JRPG/src/main.cpp /usr/include/stdc-predef.h \
- /home/aaron/Personal/JRPG/src/debug.h /usr/include/c++/15.2.1/iostream \
+CMakeFiles/unnamed.dir/src/sprite_sheet.cpp.o: \
+ /home/aaron/Personal/JRPG/src/sprite_sheet.cpp \
+ /usr/include/stdc-predef.h /home/aaron/Personal/JRPG/src/sprite_sheet.h \
+ /usr/include/c++/15.2.1/iostream \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -144,10 +145,7 @@ CMakeFiles/unnamed.dir/src/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/locale_facets.tcc \
  /usr/include/c++/15.2.1/bits/basic_ios.tcc \
  /usr/include/c++/15.2.1/bits/ostream.tcc /usr/include/c++/15.2.1/istream \
- /usr/include/c++/15.2.1/bits/istream.tcc /usr/include/c++/15.2.1/sstream \
- /usr/include/c++/15.2.1/bits/sstream.tcc \
- /home/aaron/Personal/JRPG/src/levels.h \
- /home/aaron/Personal/JRPG/src/entity.h /usr/include/SDL2/SDL.h \
+ /usr/include/c++/15.2.1/bits/istream.tcc /usr/include/SDL2/SDL.h \
  /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_stdinc.h \
  /usr/include/SDL2/SDL_config.h /usr/include/SDL2/SDL_platform.h \
  /usr/include/SDL2/begin_code.h /usr/include/SDL2/close_code.h \
@@ -316,16 +314,6 @@ CMakeFiles/unnamed.dir/src/main.cpp.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h /usr/include/c++/15.2.1/cassert \
- /usr/include/assert.h /usr/include/c++/15.2.1/fstream \
- /usr/include/c++/15.2.1/bits/codecvt.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/15.2.1/bits/fstream.tcc /usr/include/c++/15.2.1/vector \
- /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
- /usr/include/c++/15.2.1/bits/stl_vector.h \
- /usr/include/c++/15.2.1/bits/stl_bvector.h \
- /usr/include/c++/15.2.1/bits/vector.tcc /usr/include/SDL2/SDL_image.h \
- /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_render.h \
- /usr/include/SDL2/SDL_surface.h \
- /home/aaron/Personal/JRPG/src/sprite_sheet.h
+ /usr/include/SDL2/SDL_misc.h /usr/include/SDL2/SDL_render.h \
+ /usr/include/SDL2/SDL_image.h /usr/include/SDL2/SDL.h \
+ /usr/include/SDL2/SDL_surface.h

@@ -842,6 +842,7 @@ CMakeFiles/unnamed.dir/src/main.cpp.o: src/main.cpp \
   src/debug.h \
   src/entity.h \
   src/levels.h \
+  src/sprite_sheet.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
   /usr/include/SDL2/SDL_atomic.h \
@@ -1316,10 +1317,25 @@ unnamed: /usr/lib/Scrt1.o \
   /usr/lib/libyuv.so \
   /usr/lib/libz.so.1 \
   /usr/lib/libzstd.so.1 \
+  /usr/lib32/libbrotlicommon.so.1 \
+  /usr/lib32/libbrotlidec.so.1 \
+  /usr/lib32/libbrotlienc.so.1 \
+  /usr/lib32/libbz2.so.1.0 \
+  /usr/lib32/libfreetype.so.6 \
+  /usr/lib32/libglib-2.0.so.0 \
+  /usr/lib32/liblzma.so.5 \
+  /usr/lib32/libpcre2-8.so.0 \
+  /usr/lib32/libpng16.so.16 \
+  /usr/lib32/libz.so.1 \
+  /usr/lib32/libzstd.so.1 \
   CMakeFiles/unnamed.dir/src/entity.cpp.o \
   CMakeFiles/unnamed.dir/src/level.cpp.o \
   CMakeFiles/unnamed.dir/src/main.cpp.o
 
+
+/usr/lib32/libz.so.1:
+
+/usr/lib32/libpng16.so.16:
 
 /usr/lib/libzstd.so.1:
 
@@ -1365,7 +1381,11 @@ unnamed: /usr/lib/Scrt1.o \
 
 /usr/lib/crti.o:
 
+/usr/lib32/libbrotlienc.so.1:
+
 /usr/include/SDL2/SDL_image.h:
+
+src/sprite_sheet.h:
 
 /usr/include/c++/15.2.1/bits/sstream.tcc:
 
@@ -1703,6 +1723,8 @@ CMakeFiles/unnamed.dir/src/entity.cpp.o:
 
 /usr/include/SDL2/SDL_timer.h:
 
+/usr/lib32/libfreetype.so.6:
+
 /usr/include/errno.h:
 
 /usr/include/c++/15.2.1/tuple:
@@ -1839,6 +1861,8 @@ CMakeFiles/unnamed.dir/src/level.cpp.o:
 
 /usr/include/SDL2/SDL_clipboard.h:
 
+/usr/lib32/libbrotlicommon.so.1:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/mwaitintrin.h:
@@ -1874,6 +1898,8 @@ CMakeFiles/unnamed.dir/src/level.cpp.o:
 /usr/include/wchar.h:
 
 /usr/include/bits/posix1_lim.h:
+
+/usr/lib32/libzstd.so.1:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/xtestintrin.h:
 
@@ -1963,6 +1989,10 @@ src/debug.h:
 
 /usr/include/SDL2/SDL_platform.h:
 
+/usr/lib32/libglib-2.0.so.0:
+
+/usr/lib32/libbrotlidec.so.1:
+
 /usr/include/SDL2/SDL_video.h:
 
 /usr/include/bits/byteswap.h:
@@ -2005,6 +2035,8 @@ src/debug.h:
 
 /usr/include/c++/15.2.1/bits/requires_hosted.h:
 
+/usr/lib32/liblzma.so.5:
+
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/stdint-intn.h:
@@ -2042,6 +2074,8 @@ src/debug.h:
 /usr/include/bits/uintn-identity.h:
 
 /usr/include/SDL2/SDL_version.h:
+
+/usr/lib32/libpcre2-8.so.0:
 
 /usr/include/c++/15.2.1/bits/ostream.h:
 
@@ -2268,6 +2302,8 @@ src/level.cpp:
 /usr/include/c++/15.2.1/tr1/exp_integral.tcc:
 
 /usr/include/c++/15.2.1/tr1/gamma.tcc:
+
+/usr/lib32/libbz2.so.1.0:
 
 /usr/include/c++/15.2.1/tr1/legendre_function.tcc:
 
