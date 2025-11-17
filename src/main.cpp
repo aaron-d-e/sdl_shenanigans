@@ -60,10 +60,21 @@ int main()
 
     SpriteSheet characSheet(renderer, "", 0, 0);
 
+    // establish vector with animation frames
+
+    // make Animation* current animation
+
+    Uint32 lastTime = SDL_GetTicks();
+
     bool running = true;
-    SDL_Event event;
     while (running)
     {
+        // deltaTime calculations for physics and anims
+        Uint32 currentTime = SDL_GetTicks();
+        float deltaTime = (currentTime - lastTime) / 1000.0f;
+        lastTime = currentTime;
+
+        SDL_Event event;
         while (SDL_PollEvent(&event))
         {
             if (event.type == SDL_QUIT)
@@ -79,11 +90,16 @@ int main()
             }
         }
 
+        // update animation here
+
         // clear the scene
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         SDL_RenderClear(renderer);
 
         // SDL_RenderCopy(renderer, testPNG, NULL, NULL);
+        //
+        // render animation here at dest SDL_Rect
+        // use AnimationRender::render here
 
         // present render
         SDL_RenderPresent(renderer);
