@@ -5,6 +5,7 @@
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_surface.h>
 #include "sprite_sheet.h"
+#include "animation.h"
 using namespace std;
 
 int main()
@@ -58,11 +59,16 @@ int main()
 
     */
 
-    SpriteSheet characSheet(renderer, "", 0, 0);
+    SpriteSheet characSheet(renderer, "images/FlyingBomb1-Sheet.png", 32, 32);
 
     // establish vector with animation frames
 
+    vector<int> flyingFrames = {0, 1, 2, 3};
+
+    Animation flyingAnimation(flyingFrames, 12.0f);
+
     // make Animation* current animation
+    Animation* currentAnim = &flyingAnimation;
 
     Uint32 lastTime = SDL_GetTicks();
 
@@ -91,6 +97,7 @@ int main()
         }
 
         // update animation here
+        currentAnim->update(deltaTime);
 
         // clear the scene
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
@@ -99,7 +106,9 @@ int main()
         // SDL_RenderCopy(renderer, testPNG, NULL, NULL);
         //
         // render animation here at dest SDL_Rect
+        SDL_Rect dest = {100, 100, 64, 64};
         // use AnimationRender::render here
+        AnimationRender::render(renderer, characSheet, *currentAnim, dest);
 
         // present render
         SDL_RenderPresent(renderer);
