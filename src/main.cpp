@@ -4,6 +4,7 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_surface.h>
+#include <SDL2/SDL_timer.h>
 #include "sprite_sheet.h"
 #include "animation.h"
 using namespace std;
@@ -39,26 +40,6 @@ int main()
         return 1;
     }
 
-    /*
-    int flags = IMG_INIT_PNG;
-    int initStatus = IMG_Init(flags);
-    if ((initStatus & flags) != flags)
-    {
-        cout << "SDL2_Image format not initialized (might not be available)"
-             << endl;
-    }
-
-    SDL_Surface* image;
-    image = IMG_Load("images/blastoise.png");
-    if (!image)
-    {
-        cout << "Image could not be loaded." << endl;
-    }
-
-    SDL_Texture* testPNG = SDL_CreateTextureFromSurface(renderer, image);
-
-    */
-
     SpriteSheet characSheet(renderer, "images/FlyingBomb1-Sheet.png", 32, 32);
 
     // establish vector with animation frames
@@ -71,10 +52,12 @@ int main()
     Animation* currentAnim = &flyingAnimation;
 
     Uint32 lastTime = SDL_GetTicks();
+    int frameCounter = 0;
 
     bool running = true;
     while (running)
     {
+        frameCounter++;
         // deltaTime calculations for physics and anims
         Uint32 currentTime = SDL_GetTicks();
         float deltaTime = (currentTime - lastTime) / 1000.0f;
@@ -113,15 +96,6 @@ int main()
         // present render
         SDL_RenderPresent(renderer);
     }
-
-    // quit sdl2 image
-    // IMG_Quit();
-
-    // free sdl surface
-    //  SDL_FreeSurface(image);
-
-    // destroy texture
-    // SDL_DestroyTexture(testPNG);
 
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);

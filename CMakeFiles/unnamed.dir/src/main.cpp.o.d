@@ -327,6 +327,6 @@ CMakeFiles/unnamed.dir/src/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/stl_bvector.h \
  /usr/include/c++/15.2.1/bits/vector.tcc /usr/include/SDL2/SDL_image.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_render.h \
- /usr/include/SDL2/SDL_surface.h \
+ /usr/include/SDL2/SDL_surface.h /usr/include/SDL2/SDL_timer.h \
  /home/aaron/Personal/JRPG/src/sprite_sheet.h \
  /home/aaron/Personal/JRPG/src/animation.h
