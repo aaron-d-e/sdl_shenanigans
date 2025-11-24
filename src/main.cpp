@@ -5,8 +5,8 @@
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_surface.h>
 #include <SDL2/SDL_timer.h>
-#include "sprite_sheet.h"
-#include "animation.h"
+#include "animations/sprite_sheet.h"
+#include "animations/animation.h"
 using namespace std;
 
 int main()
